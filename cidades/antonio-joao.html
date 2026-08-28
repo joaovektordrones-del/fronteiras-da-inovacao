@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antônio João · Fronteiras da Inovação</title>
+<meta name="description" content="Agência Fronteiras da Inovação — desenvolvimento territorial integrado da faixa de fronteira MS–Paraguai. 11 municípios, dois países, um só território.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24407E;--navy2:#1A3060;--yel:#FFD400;--ink:#1c2740;--mut:#5d6b85;--line:#e3e8f2;--bg:#f7f9fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:flex;gap:16px;font-size:13px;font-weight:600;flex-wrap:wrap;color:var(--navy2)}
+.nav a:hover{color:var(--navy);text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;line-height:1.15;max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p{max-width:760px;margin:18px auto 0;font-size:clamp(14px,1.8vw,17px);color:#dbe4f5;line-height:1.6}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hero .cta{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;padding:12px 26px;border-radius:99px}
+.hero .cta2{display:inline-block;border:1.5px solid #9fb2dd;color:#fff;font-weight:600;padding:12px 26px;border-radius:99px}
+.hero .cta2:hover{border-color:var(--yel);color:var(--yel)}
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.tlc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tlc b{display:block;font-size:17px;font-weight:800;color:var(--navy)}
+.tlc span{font-size:12px;color:var(--mut);line-height:1.4;display:block;margin-top:3px}
+.projstrip{margin-top:30px;background:var(--navy2);border-radius:16px;padding:24px;color:#fff}
+.projstrip h3{font-size:15px;font-weight:800;color:var(--yel);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.projstrip .itens{display:flex;flex-wrap:wrap;gap:9px}
+.projstrip .it{font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:99px}
+.igrduo{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:10px}
+.igrduo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pchip{background:var(--bg);border:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.duo{grid-template-columns:1fr}.igrduo{grid-template-columns:1fr}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats{background:var(--navy);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--yel)}
+.stats span{font-size:12.5px;color:#cfd9ee}
+section{padding:56px 0}
+section.alt{background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.lead{max-width:820px;color:var(--mut);line-height:1.7;font-size:15.5px}
+.lead b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1.5px solid var(--navy);color:var(--navy);font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;transition:.15s}
+.chip:hover{background:var(--navy);color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.card p{font-size:13px;color:var(--mut);line-height:1.55}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;font-weight:800}
+.evgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.evento{border-radius:16px;padding:26px;color:#fff;background:linear-gradient(150deg,var(--navy),var(--navy2))}
+.evento .data{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;font-size:13px;padding:5px 13px;border-radius:99px;margin-bottom:13px}
+.evento h3{font-size:20px;font-weight:800;line-height:1.25}
+.evento .local{color:var(--yel);font-weight:600;font-size:14px;margin:6px 0 10px}
+.evento p{font-size:13.5px;color:#dbe4f5;line-height:1.6}
+.mapabox{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+footer{background:var(--navy2);color:#c9d5ec;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff}
+/* página da cidade */
+.cidhero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:46px 0}
+.cidhero .volta{color:var(--yel);font-weight:600;font-size:13px}
+.cidhero h1{font-size:clamp(26px,4vw,40px);font-weight:800;margin-top:10px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff}
+.badge.y{background:var(--yel);color:var(--navy2)}
+.cidhero .pos{max-width:840px;margin-top:16px;color:#dbe4f5;line-height:1.65;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.kpi b{display:block;font-size:21px;font-weight:800;color:var(--navy)}
+.kpi span{font-size:12px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.kpi .fonte{font-size:10px;color:#93a0b8;margin-top:6px;display:block}
+.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:10px}
+.bloco{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.bloco h3{font-size:16px;font-weight:800;margin-bottom:10px;color:var(--navy2)}
+.bloco ul{list-style:none}
+.bloco li{font-size:13.5px;color:var(--mut);line-height:1.55;padding:7px 0;border-bottom:1px dashed var(--line)}
+.bloco li:last-child{border-bottom:none}
+.bloco li b{color:var(--ink);font-weight:600}
+.opgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.op{background:#fff;border:1px solid var(--line);border-left:4px solid var(--yel);border-radius:12px;padding:16px}
+.op h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.op ul{list-style:none}
+.op li{font-size:12.5px;color:var(--mut);line-height:1.5;padding:4px 0}
+.fontes{margin-top:26px;font-size:11.5px;color:#93a0b8;line-height:1.7}
+.fontes a{color:var(--navy);text-decoration:underline}
+@media(max-width:900px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.opgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.duas{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}.opgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html"><img src="../assets/logo-h.webp" alt="Fronteiras da Inovação"></a>
+  <nav class="nav">
+    <a href="../index.html#quem-somos">Quem somos</a>
+    <a href="../index.html#eixos">Eixos</a>
+    <a href="../index.html#territorio">Território</a>
+    <a href="../index.html#municipios">Municípios</a>
+    <a href="../index.html#eventos">Eventos</a>
+    <a href="../index.html#igr">IGR</a>
+    <a href="../index.html#parceiros">Parceiros</a>
+  </nav>
+</div></div>
+
+<div class="cidhero"><div class="wrap">
+  <a class="volta" href="../index.html#municipios">← Todos os municípios</a>
+  <h1>Antônio João</h1>
+  <div class="badges"><span class="badge y">Linha de fronteira</span></div>
+  <p class="pos">Antônio João combina três ativos raros para um município de ~9,3 mil habitantes: (1) fronteira seca com o departamento paraguaio de Amambay, sem cidade-gêmea consolidada — logo, com espaço aberto para ordenar comércio, logística e serviços binacionais ainda pouco estruturados; (2) base econômica primária robusta e em forte aceleração, com PIB per capita saltando de R$ 22,9 mil (2016) para R$ 59,2 mil (2020) e R$ 91,6 mil (2023), puxado por pecuária de corte e grãos;</p>
+</div></div>
+
+<section style="padding-top:34px"><div class="wrap">
+  <div class="kpis"><div class="kpi"><b>9.303</b><span>habitantes</span><span class="fonte">IBGE, Censo 2022</span></div><div class="kpi"><b>9.717</b><span>estimativa 2025</span><span class="fonte">IBGE, 2025</span></div><div class="kpi"><b>R$ 91.560</b><span>PIB per capita</span><span class="fonte">IBGE, 2023</span></div><div class="kpi"><b>0,643</b><span>IDHM</span><span class="fonte">Atlas Brasil/PNUD, 2010</span></div><div class="kpi"><b>1.096</b><span>km² de área</span><span class="fonte">IBGE</span></div><div class="kpi"><b>760</b><span>empresas ativas</span><span class="fonte">CNPJ/RFB (proxy), 2026</span></div><div class="kpi"><b>3.867</b><span>veículos na frota</span><span class="fonte">Senatran/MS, 2021</span></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="duas">
+  <div class="bloco"><h3>Economia & vocações</h3><ul><li><b>Vocações:</b> Pecuária de corte, Agricultura de grãos (soja, milho, trigo), Agricultura familiar e horticultura (tomate, fruticultura), Comércio e serviços de fronteira</li><li><b>Cadeias produtivas:</b> Bovinocultura de corte sobre ampla base de pastagens (cerca de 80 mil ha, conforme perfil municipal), grãos (soja, milho, trigo) em expansão, agricultura familiar com cadeia de horticultura — destaque para tomate, com cerca de 35 produtores e valor anual em…</li><li><b>Empregadores de referência:</b> Comércio varejista local (setor predominante em geração de ocupações, SEMADESC 2022), Administração pública municipal, Estabelecimentos agropecuários (pecuária de corte e produção de grãos)</li><li><b>Comunidades e assentamentos:</b> Terra Indígena Ñande Ru Marangatu, do povo Guarani-Kaiowá, localizada no distrito de Campestre (Antônio João), na fronteira com o Paraguai.</li></ul>
+  <ul style="margin-top:8px"><li><b>Atrativos:</b> Serra de Maracaju, Cachoeira do Salto, Balneário do Bié, Sítios com arte/inscrições rupestres na região</li></ul></div>
+  <div class="bloco"><h3>Fronteira & logística</h3><ul><li><b>Ligação:</b> Fronteira seca (sem obstáculo natural) com área rural do departamento paraguaio de Amambay. Diferente de Ponta Porã/Pedro Juan Caballero, Coronel Sapucaia/Capitán Bado e Bela Vista/Bella Vista Norte, Antônio João não possui…</li><li><b>Acessos:</b> MS-164, MS-166, MS-384 (liga ao corredor da Rota Bioceânica), BR-267 (acesso regional via Ponta Porã)</li><li><b>Distância de Campo Grande:</b> 301 km</li><li><b>Rota Bioceânica:</b> Antônio João está na área de influência direta da Rota Bioceânica de Integração, conectando-se pela MS-384 ao eixo Ponta Porã–Pedro Juan Caballero rumo ao Paraguai, Argentina e Chile.</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Para investir</div>
+  <h2>Oportunidades por eixo</h2>
+  <div class="opgrid"><div class="op"><h4>Turismo</h4><ul><li>• Roteiro histórico-militar da Guerra do Paraguai (Tenente Antônio João) integrado a Dourados e Ponta Porã</li><li>• Estruturação de turismo de natureza na Serra de Maracaju e na Cachoeira do Salto (trilhas, mirantes, sinalização)</li><li>• Requalificação do Balneário do Bié como equipamento de lazer regional</li></ul></div><div class="op"><h4>Relações Internacionais</h4><ul><li>• Cooperação sanitária, fitossanitária e de segurança com o departamento paraguaio de Amambay, dada a condição de linha seca sem posto aduaneiro…</li><li>• Ampliação de intercâmbios acadêmicos binacionais a partir da experiência já iniciada de universitários paraguaios visitando a agricultura familiar…</li><li>• Articulação no Comitê de Fronteira MS-Paraguai para pautar infraestrutura, segurança e facilitação de comércio</li></ul></div><div class="op"><h4>Educação & Inovação</h4><ul><li>• Atração/ampliação de polos de ensino técnico e superior a distância (UAB/UEMS) voltados a agro e gestão pública</li><li>• Programa de capacitação empreendedora para os cerca de 760 CNPJs ativos do município, em parceria com Sebrae-MS</li><li>• Formação bilíngue português-guarani/espanhol aproveitando a condição fronteiriça</li></ul></div><div class="op"><h4>Saúde</h4><ul><li>• Fortalecimento da atenção primária (rede com 4 UBS/centros de saúde e 10 leitos em 2020) frente à demanda transfronteiriça informal</li><li>• Saúde indígena diferenciada para a TI Ñande Ru Marangatu, em articulação com o DSEI e o INSS (que já leva atendimento previdenciário à terra indígena)</li><li>• Telessaúde e regulação com Ponta Porã/Dourados para média e alta complexidade, reduzindo deslocamentos de 300 km até Campo Grande</li></ul></div><div class="op"><h4>Agronegócios</h4><ul><li>• Agregação de valor à pecuária de corte (confinamento, processamento de pequeno/médio porte) sobre base de pastagens já consolidada</li><li>• Expansão de grãos (soja, milho, trigo) com escoamento potencial via corredor da Rota Bioceânica/MS-384</li><li>• Estruturação da cadeia de agricultura familiar (tomate e horticultura, ~35 produtores) com apoio Agraer/Sebrae</li></ul></div><div class="op"><h4>Governança</h4><ul><li>• Modernização da arrecadação própria (receita tributária própria de R$ 2,39 milhões em 2021 frente a R$ 101,69 milhões de receita total em 2025 —…</li><li>• Apoio técnico à implementação do acordo União-MS (2024) de regularização fundiária da TI Ñande Ru Marangatu, reduzindo conflito agrário</li><li>• Planejamento territorial integrado com os demais 10 municípios da Agência Fronteiras da Inovação para atrair investimento coordenado na faixa de…</li></ul></div></div>
+  <p class="fontes"><b>Fontes:</b> IBGE Cidades e Estados - Antônio João (MS) (2025/2026) · Perfil Socioeconômico Municipal - Antônio João 2022 (SEMADESC/MS) (2022) · População de Antônio João (MS) é de 9.303 pessoas, aponta o Censo do IBGE (2023) · Cidades do Meu Brasil - Antônio João, MS (2026) · Wikipédia - Antônio João (verbete em português) (2026) · Wikipedia - Antônio João (English) (2026) · Wikipedia - Capitán Bado (2026) · Cidades na fronteira do Brasil com Paraguai — Correio Braziliense (2025) · Perfil elaborado pela Agência Fronteiras da Inovação com dado público verificável; valores acompanham fonte e ano.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Agência Fronteiras da Inovação</b><br>Faixa de fronteira MS–Paraguai · Brasil ↔ Paraguai</div>
+  <div>Transformar fronteiras em conexões.<br>Conexões em oportunidades. Oportunidades em desenvolvimento.<br><span style="opacity:.7">© 2026 Fronteiras da Inovação. Todos os direitos reservados.</span></div>
+</div></footer>
+</body></html>

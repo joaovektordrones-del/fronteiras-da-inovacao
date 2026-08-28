@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amambai · Fronteiras da Inovação</title>
+<meta name="description" content="Agência Fronteiras da Inovação — desenvolvimento territorial integrado da faixa de fronteira MS–Paraguai. 11 municípios, dois países, um só território.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24407E;--navy2:#1A3060;--yel:#FFD400;--ink:#1c2740;--mut:#5d6b85;--line:#e3e8f2;--bg:#f7f9fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:flex;gap:16px;font-size:13px;font-weight:600;flex-wrap:wrap;color:var(--navy2)}
+.nav a:hover{color:var(--navy);text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;line-height:1.15;max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p{max-width:760px;margin:18px auto 0;font-size:clamp(14px,1.8vw,17px);color:#dbe4f5;line-height:1.6}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hero .cta{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;padding:12px 26px;border-radius:99px}
+.hero .cta2{display:inline-block;border:1.5px solid #9fb2dd;color:#fff;font-weight:600;padding:12px 26px;border-radius:99px}
+.hero .cta2:hover{border-color:var(--yel);color:var(--yel)}
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.tlc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tlc b{display:block;font-size:17px;font-weight:800;color:var(--navy)}
+.tlc span{font-size:12px;color:var(--mut);line-height:1.4;display:block;margin-top:3px}
+.projstrip{margin-top:30px;background:var(--navy2);border-radius:16px;padding:24px;color:#fff}
+.projstrip h3{font-size:15px;font-weight:800;color:var(--yel);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.projstrip .itens{display:flex;flex-wrap:wrap;gap:9px}
+.projstrip .it{font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:99px}
+.igrduo{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:10px}
+.igrduo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pchip{background:var(--bg);border:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.duo{grid-template-columns:1fr}.igrduo{grid-template-columns:1fr}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats{background:var(--navy);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--yel)}
+.stats span{font-size:12.5px;color:#cfd9ee}
+section{padding:56px 0}
+section.alt{background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.lead{max-width:820px;color:var(--mut);line-height:1.7;font-size:15.5px}
+.lead b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1.5px solid var(--navy);color:var(--navy);font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;transition:.15s}
+.chip:hover{background:var(--navy);color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.card p{font-size:13px;color:var(--mut);line-height:1.55}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;font-weight:800}
+.evgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.evento{border-radius:16px;padding:26px;color:#fff;background:linear-gradient(150deg,var(--navy),var(--navy2))}
+.evento .data{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;font-size:13px;padding:5px 13px;border-radius:99px;margin-bottom:13px}
+.evento h3{font-size:20px;font-weight:800;line-height:1.25}
+.evento .local{color:var(--yel);font-weight:600;font-size:14px;margin:6px 0 10px}
+.evento p{font-size:13.5px;color:#dbe4f5;line-height:1.6}
+.mapabox{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+footer{background:var(--navy2);color:#c9d5ec;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff}
+/* página da cidade */
+.cidhero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:46px 0}
+.cidhero .volta{color:var(--yel);font-weight:600;font-size:13px}
+.cidhero h1{font-size:clamp(26px,4vw,40px);font-weight:800;margin-top:10px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff}
+.badge.y{background:var(--yel);color:var(--navy2)}
+.cidhero .pos{max-width:840px;margin-top:16px;color:#dbe4f5;line-height:1.65;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.kpi b{display:block;font-size:21px;font-weight:800;color:var(--navy)}
+.kpi span{font-size:12px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.kpi .fonte{font-size:10px;color:#93a0b8;margin-top:6px;display:block}
+.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:10px}
+.bloco{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.bloco h3{font-size:16px;font-weight:800;margin-bottom:10px;color:var(--navy2)}
+.bloco ul{list-style:none}
+.bloco li{font-size:13.5px;color:var(--mut);line-height:1.55;padding:7px 0;border-bottom:1px dashed var(--line)}
+.bloco li:last-child{border-bottom:none}
+.bloco li b{color:var(--ink);font-weight:600}
+.opgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.op{background:#fff;border:1px solid var(--line);border-left:4px solid var(--yel);border-radius:12px;padding:16px}
+.op h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.op ul{list-style:none}
+.op li{font-size:12.5px;color:var(--mut);line-height:1.5;padding:4px 0}
+.fontes{margin-top:26px;font-size:11.5px;color:#93a0b8;line-height:1.7}
+.fontes a{color:var(--navy);text-decoration:underline}
+@media(max-width:900px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.opgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.duas{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}.opgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html"><img src="../assets/logo-h.webp" alt="Fronteiras da Inovação"></a>
+  <nav class="nav">
+    <a href="../index.html#quem-somos">Quem somos</a>
+    <a href="../index.html#eixos">Eixos</a>
+    <a href="../index.html#territorio">Território</a>
+    <a href="../index.html#municipios">Municípios</a>
+    <a href="../index.html#eventos">Eventos</a>
+    <a href="../index.html#igr">IGR</a>
+    <a href="../index.html#parceiros">Parceiros</a>
+  </nav>
+</div></div>
+
+<div class="cidhero"><div class="wrap">
+  <a class="volta" href="../index.html#municipios">← Todos os municípios</a>
+  <h1>Amambai</h1>
+  <div class="badges"><span class="badge">Faixa de fronteira</span></div>
+  <p class="pos">Amambaí funciona como centro de comércio e serviços para os municípios menores do seu entorno (Coronel Sapucaia, Tacuru, Aral Moreira, Paranhos), sem fazer fronteira direta com o Paraguai, mas a poucos km de dois pontos de travessia (Coronel Sapucaia ~50 km e Ponta Porã ~93 km). Sua base econômica combina pecuária de corte com abate industrial local, um histórico polo de erva-mate em processo de retomada, suinocultura relevante em escala estadual e um PIB per capita (R$ 61,7 mil em 2023) acima da média de vários municípios vizinhos menores.</p>
+</div></div>
+
+<section style="padding-top:34px"><div class="wrap">
+  <div class="kpis"><div class="kpi"><b>39.325</b><span>habitantes</span><span class="fonte">IBGE, Censo 2022</span></div><div class="kpi"><b>41.751</b><span>estimativa 2025</span><span class="fonte">IBGE, 2025</span></div><div class="kpi"><b>R$ 61.698</b><span>PIB per capita</span><span class="fonte">IBGE, 2023</span></div><div class="kpi"><b>0,673</b><span>IDHM</span><span class="fonte">Atlas Brasil/PNUD, 2010</span></div><div class="kpi"><b>4.194</b><span>km² de área</span><span class="fonte">IBGE</span></div><div class="kpi"><b>5,8</b><span>IDEB anos iniciais</span><span class="fonte">INEP, 2025</span></div><div class="kpi"><b>3.512</b><span>empresas ativas</span><span class="fonte">CNPJ/RFB (proxy), 2026</span></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="duas">
+  <div class="bloco"><h3>Economia & vocações</h3><ul><li><b>Vocações:</b> Pecuária de corte (bovinocultura), Suinocultura (um dos polos estaduais), Erva-mate (histórico polo produtor do MS, com esforços recentes de retomada do cultivo), Comércio e serviços — polo regional do Cone Sul de MS, Agricultura diversificada (banana, abacaxi, hortaliças) e piscicultura em expansão</li><li><b>Cadeias produtivas:</b> A pecuária de corte é a atividade mais tradicional, com abate industrial pelo frigorífico Frigmann. O município é historicamente um dos maiores produtores de erva-mate do Mato Grosso do Sul, hoje com iniciativas estaduais (Agraer/Uems) para retomar o cultivo…</li><li><b>Empregadores de referência:</b> Prefeitura Municipal de Amambaí (administração pública é a maior categoria de vínculos formais), Frigorífico Frigmann (abate e processamento de carne bovina), Comércio varejista e atacadista regional</li><li><b>Comunidades e assentamentos:</b> Amambaí concentra uma das maiores populações indígenas do MS. Pelo Censo 2010 (IBGE), 8.807 indígenas viviam no município (24,7% da população total de então).</li></ul>
+  <ul style="margin-top:8px"><li><b>Atrativos:</b> Aldeias indígenas Guarani-Kaiowá (cultura e artesanato), Rota estadual &quot;Caminho dos Ervais&quot; (roteiro turístico ligado à história da erva-mate), Centro de Eventos Municipal, Recanto do Binho (espaço de turismo rural/lazer)</li></ul></div>
+  <div class="bloco"><h3>Fronteira & logística</h3><ul><li><b>Ligação:</b> Amambaí NÃO é município de linha de fronteira (não faz limite direto com o Paraguai); integra apenas a faixa de fronteira de 150 km.</li><li><b>Acessos:</b> MS-156 (corta a área urbana, liga a Dourados/Caarapó e a Coronel Sapucaia), MS-289 (liga Amambaí a Juti e Coronel Sapucaia), MS-386, BR-163 (acesso via entroncamento na região de Dourados, rota principal para Campo Grande)</li><li><b>Distância de Campo Grande:</b> 351 km</li><li><b>Rota Bioceânica:</b> Amambaí não está no traçado direto da Rota Bioceânica (que corre mais ao sul, via Porto Murtinho/Mundo Novo e sobretudo via Ponta Porã), mas está na área de influência logística do corredor Brasil-Paraguai-Argentina-Chile por estar no eixo BR-163/MS-156 que conecta a região ao restante do estado.</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Para investir</div>
+  <h2>Oportunidades por eixo</h2>
+  <div class="opgrid"><div class="op"><h4>Turismo</h4><ul><li>• Estruturação da Rota Caminho dos Ervais como roteiro de turismo rural e cultural</li><li>• Turismo étnico responsável nas aldeias Guarani-Kaiowá (artesanato, gastronomia, vivências)</li><li>• Uso do Centro de Eventos Municipal para turismo de negócios e feiras do agronegócio</li></ul></div><div class="op"><h4>Relações Internacionais</h4><ul><li>• Aproveitar a posição intermediária entre as travessias de Coronel Sapucaia e Ponta Porã para logística e serviços de apoio ao comércio bilateral</li><li>• Participação continuada em fóruns institucionais da Rota Bioceânica para captar investimentos em infraestrutura</li><li>• Cooperação técnica regional em sanidade animal e vegetal dado o peso da pecuária na cadeia de exportação</li></ul></div><div class="op"><h4>Educação & Inovação</h4><ul><li>• Ampliar oferta presencial de cursos técnicos e superiores (hoje concentrada em polos de EAD privados)</li><li>• Fortalecer e expandir a unidade local da UEMS</li><li>• Programas de recuperação da aprendizagem nos anos iniciais do fundamental, dada queda do IDEB de 6,0 (2023) para 5,8 (2025)</li></ul></div><div class="op"><h4>Saúde</h4><ul><li>• Melhorar a publicação de dados abertos de saúde municipal (painéis públicos consultados mostraram indicadores de estabelecimentos/leitos sem…</li><li>• Fortalecer atenção primária e saúde indígena (SESAI) dada a expressiva população Guarani-Kaiowá do município</li></ul></div><div class="op"><h4>Agronegócios</h4><ul><li>• Verticalização da cadeia da erva-mate, retomando escala histórica de produção no município</li><li>• Expansão e agregação de valor na cadeia da bovinocultura de corte (frigorífico Frigmann)</li><li>• Estruturação da piscicultura, com novo frigorífico de peixes anunciado na região (2026)</li></ul></div><div class="op"><h4>Governança</h4><ul><li>• Acompanhar a ratificação de áreas em faixa de fronteira (prazo indicado até outubro/2025 pela Aprosoja/MS)</li><li>• Melhorar a completude de dados públicos municipais em painéis federais (CONASEMS, IBGE Cidades) hoje com lacunas</li><li>• Articulação com FUNAI/IBGE para atualização e publicação de dados populacionais indígenas do Censo 2022 por município</li></ul></div></div>
+  <p class="fontes"><b>Fontes:</b> IBGE Cidades - Amambai (MS) (2025 (dados de vários anos: 2010, 2022, 2023, 2025)) · IBGE - Municípios da Faixa de Fronteira e Cidades Gêmeas (2021) · MEC/INEP via Gazeta Educação - IDEB 2025 Amambai (2026) · Prefeitura Municipal de Amambai - notícia sobre Frigorífico Frigmann (2024) · Pantanal MS - Conhecendo a cidade de Amambai-MS (geografia, distâncias, terras indígenas) (2026) · Caravela.info - Economia de Amambai-MS (PIB, emprego, salário, CAGED) (2026) · Econodata - Empresas ativas em Amambai, MS (2026) · Infosanbas - Saneamento básico em Amambai-MS (SNIS/DataSUS) (2020 (SNIS) / 2010 (Censo)) · Perfil elaborado pela Agência Fronteiras da Inovação com dado público verificável; valores acompanham fonte e ano.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Agência Fronteiras da Inovação</b><br>Faixa de fronteira MS–Paraguai · Brasil ↔ Paraguai</div>
+  <div>Transformar fronteiras em conexões.<br>Conexões em oportunidades. Oportunidades em desenvolvimento.<br><span style="opacity:.7">© 2026 Fronteiras da Inovação. Todos os direitos reservados.</span></div>
+</div></footer>
+</body></html>

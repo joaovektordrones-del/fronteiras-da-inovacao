@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fronteiras da Inovação — Brasil ↔ Paraguai</title>
+<meta name="description" content="Agência Fronteiras da Inovação — desenvolvimento territorial integrado da faixa de fronteira MS–Paraguai. 11 municípios, dois países, um só território.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24407E;--navy2:#1A3060;--yel:#FFD400;--ink:#1c2740;--mut:#5d6b85;--line:#e3e8f2;--bg:#f7f9fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:flex;gap:16px;font-size:13px;font-weight:600;flex-wrap:wrap;color:var(--navy2)}
+.nav a:hover{color:var(--navy);text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;line-height:1.15;max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p{max-width:760px;margin:18px auto 0;font-size:clamp(14px,1.8vw,17px);color:#dbe4f5;line-height:1.6}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hero .cta{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;padding:12px 26px;border-radius:99px}
+.hero .cta2{display:inline-block;border:1.5px solid #9fb2dd;color:#fff;font-weight:600;padding:12px 26px;border-radius:99px}
+.hero .cta2:hover{border-color:var(--yel);color:var(--yel)}
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.tlc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tlc b{display:block;font-size:17px;font-weight:800;color:var(--navy)}
+.tlc span{font-size:12px;color:var(--mut);line-height:1.4;display:block;margin-top:3px}
+.projstrip{margin-top:30px;background:var(--navy2);border-radius:16px;padding:24px;color:#fff}
+.projstrip h3{font-size:15px;font-weight:800;color:var(--yel);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.projstrip .itens{display:flex;flex-wrap:wrap;gap:9px}
+.projstrip .it{font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:99px}
+.igrduo{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:10px}
+.igrduo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pchip{background:var(--bg);border:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.duo{grid-template-columns:1fr}.igrduo{grid-template-columns:1fr}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats{background:var(--navy);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--yel)}
+.stats span{font-size:12.5px;color:#cfd9ee}
+section{padding:56px 0}
+section.alt{background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.lead{max-width:820px;color:var(--mut);line-height:1.7;font-size:15.5px}
+.lead b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1.5px solid var(--navy);color:var(--navy);font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;transition:.15s}
+.chip:hover{background:var(--navy);color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.card p{font-size:13px;color:var(--mut);line-height:1.55}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;font-weight:800}
+.evgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.evento{border-radius:16px;padding:26px;color:#fff;background:linear-gradient(150deg,var(--navy),var(--navy2))}
+.evento .data{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;font-size:13px;padding:5px 13px;border-radius:99px;margin-bottom:13px}
+.evento h3{font-size:20px;font-weight:800;line-height:1.25}
+.evento .local{color:var(--yel);font-weight:600;font-size:14px;margin:6px 0 10px}
+.evento p{font-size:13.5px;color:#dbe4f5;line-height:1.6}
+.mapabox{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+footer{background:var(--navy2);color:#c9d5ec;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff}
+/* página da cidade */
+.cidhero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:46px 0}
+.cidhero .volta{color:var(--yel);font-weight:600;font-size:13px}
+.cidhero h1{font-size:clamp(26px,4vw,40px);font-weight:800;margin-top:10px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff}
+.badge.y{background:var(--yel);color:var(--navy2)}
+.cidhero .pos{max-width:840px;margin-top:16px;color:#dbe4f5;line-height:1.65;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.kpi b{display:block;font-size:21px;font-weight:800;color:var(--navy)}
+.kpi span{font-size:12px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.kpi .fonte{font-size:10px;color:#93a0b8;margin-top:6px;display:block}
+.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:10px}
+.bloco{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.bloco h3{font-size:16px;font-weight:800;margin-bottom:10px;color:var(--navy2)}
+.bloco ul{list-style:none}
+.bloco li{font-size:13.5px;color:var(--mut);line-height:1.55;padding:7px 0;border-bottom:1px dashed var(--line)}
+.bloco li:last-child{border-bottom:none}
+.bloco li b{color:var(--ink);font-weight:600}
+.opgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.op{background:#fff;border:1px solid var(--line);border-left:4px solid var(--yel);border-radius:12px;padding:16px}
+.op h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.op ul{list-style:none}
+.op li{font-size:12.5px;color:var(--mut);line-height:1.5;padding:4px 0}
+.fontes{margin-top:26px;font-size:11.5px;color:#93a0b8;line-height:1.7}
+.fontes a{color:var(--navy);text-decoration:underline}
+@media(max-width:900px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.opgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.duas{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}.opgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="index.html"><img src="assets/logo-h.webp" alt="Fronteiras da Inovação"></a>
+  <nav class="nav">
+    <a href="index.html#quem-somos">Quem somos</a>
+    <a href="index.html#eixos">Eixos</a>
+    <a href="index.html#territorio">Território</a>
+    <a href="index.html#municipios">Municípios</a>
+    <a href="index.html#eventos">Eventos</a>
+    <a href="index.html#igr">IGR</a>
+    <a href="index.html#parceiros">Parceiros</a>
+  </nav>
+</div></div>
+
+<div class="hero"><div class="wrap">
+  <h1>Transformar a fronteira de custo em <em>fronteira de oportunidades</em></h1>
+  <p>Somos a união de lideranças públicas, empresariais e da sociedade civil de onze municípios da faixa de fronteira de Mato Grosso do Sul com o Paraguai — um só território, dois países, trabalhando por desenvolvimento, inovação e integração.</p>
+  <div class="ctas"><a class="cta" href="#eventos">Arena de Relações Internacionais 2026</a><a class="cta2" href="#quem-somos">Conheça a agência</a></div>
+</div></div>
+
+<div class="stats"><div class="wrap"><div class="grid">
+  <div><b>11</b><span>municípios associados</span></div>
+  <div><b>280 mil</b><span>habitantes no território</span></div>
+  <div><b>R$ 10 bi+</b><span>de PIB regional</span></div>
+  <div><b>2 países</b><span>um só território</span></div>
+</div></div></div>
+
+<section id="quem-somos"><div class="wrap">
+  <div class="kicker">Quem somos</div>
+  <h2>Da fronteira como limite à fronteira como conexão</h2>
+  <div class="duo">
+    <div>
+      <p class="lead">A <b>Fronteiras da Inovação</b> é uma associação civil de desenvolvimento regional criada por lideranças da faixa de fronteira MS–Paraguai, após um ano de capacitação e articulação no <b>Programa Líder Fronteira do Sebrae/MS</b>.</p>
+      <p class="lead" style="margin-top:12px">A Agência articula municípios, instituições, setor produtivo e sociedade para transformar potencialidades compartilhadas em desenvolvimento — fortalecendo a cooperação Brasil–Paraguai e preparando o território para as novas conexões da <b>Rota Bioceânica</b>.</p>
+    </div>
+    <img src="assets/foto.webp" alt="Lideranças da Fronteiras da Inovação">
+  </div>
+  <div class="tl">
+    <div class="tlc"><b>2019</b><span>Criação do movimento, no Programa Líder Fronteira</span></div>
+    <div class="tlc"><b>2019–2021</b><span>Estruturação e articulação territorial</span></div>
+    <div class="tlc"><b>2025</b><span>Institucionalização da associação civil</span></div>
+    <div class="tlc"><b>2026</b><span>Operacionalização: agenda, eventos e projetos</span></div>
+  </div>
+</div></section>
+
+<section class="alt" id="eixos"><div class="wrap">
+  <div class="kicker">Eixos da agenda</div>
+  <h2>Seis eixos. Uma agenda integrada.</h2>
+  <div class="grid3"><div class="card"><div class="ic">T</div><h3>Turismo</h3><p>Potencialidades que viram experiências, negócios, renda e posicionamento territorial.</p></div><div class="card"><div class="ic">RI</div><h3>Relações Internacionais</h3><p>A fronteira como integração, cooperação e oportunidades entre Brasil e Paraguai.</p></div><div class="card"><div class="ic">E</div><h3>Educação, Empreendedorismo &amp; Inovação</h3><p>Conhecimento que vira competência, empreendedorismo e novos negócios.</p></div><div class="card"><div class="ic">S</div><h3>Saúde</h3><p>Desafios compartilhados que viram cooperação e soluções integradas na fronteira.</p></div><div class="card"><div class="ic">A</div><h3>Agronegócios</h3><p>Produção que ganha valor agregado, inovação, competitividade e mercados.</p></div><div class="card"><div class="ic">G</div><h3>Governança Estratégica</h3><p>Articulação que vira estratégia, execução e resultados para o território.</p></div></div>
+  <div class="projstrip">
+    <h3>Projetos estruturantes em articulação</h3>
+    <div class="itens">
+      <span class="it">Duplicação da BR-463</span>
+      <span class="it">Pátio logístico de fronteira</span>
+      <span class="it">Saneamento, energia e conectividade</span>
+      <span class="it">Comitê permanente Brasil–Paraguai</span>
+      <span class="it">Escritório regional da Agência</span>
+      <span class="it">Preparação para a Rota Bioceânica</span>
+    </div>
+  </div>
+</div></section>
+
+<section id="territorio"><div class="wrap">
+  <div class="kicker">Território</div>
+  <h2>A faixa de fronteira, no mapa</h2>
+  <p class="lead">Onze municípios na faixa de fronteira MS–Paraguai, conectados pelas BR-463, BR-267 e MS-156 — oito deles na própria linha internacional, com cidades-gêmeas do lado paraguaio, e Porto Murtinho como travessia da <b>ponte binacional da Rota Bioceânica</b>. Clique num município para abrir o perfil completo.</p>
+  <div class="mapabox"><svg viewBox="0 0 860 560" role="img" aria-label="Mapa da faixa de fronteira MS–Paraguai com os 11 municípios" style="width:100%;height:auto">
+<style>.mpt:hover circle{stroke:#FFD400;stroke-width:3}</style>
+<path d="M 154 52 C 402 208, 568 265, 595 350 S 651 442, 715 442" fill="none" stroke="#c9d3e8" stroke-width="26" stroke-linecap="round" opacity=".55"/>
+<text x="218" y="237" font-size="13" fill="#9aa8c4" font-style="italic" transform="rotate(-52 218 237)">PARAGUAI</text>
+<a href="cidades/porto-murtinho.html"><g class="mpt"><circle cx="166" cy="109" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="179" y="113" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Porto Murtinho</text><text x="179.21763682658087" y="124.85192659393314" font-size="10" fill="#b45309" font-style="italic">Ponte da Rota Bioceânica (2026)</text></g></a><a href="cidades/bela-vista.html"><g class="mpt"><circle cx="417" cy="167" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="404" y="171" text-anchor="end" font-size="12.5" font-weight="600" fill="#1c2740">Bela Vista</text></g></a><a href="cidades/antonio-joao.html"><g class="mpt"><circle cx="522" cy="179" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="522" y="166" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1c2740">Antônio João</text></g></a><a href="cidades/ponta-pora.html"><g class="mpt"><circle cx="563" cy="228" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="550" y="232" text-anchor="end" font-size="12.5" font-weight="600" fill="#1c2740">Ponta Porã</text></g></a><a href="cidades/aral-moreira.html"><g class="mpt"><circle cx="580" cy="284" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="593" y="288" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Aral Moreira</text></g></a><a href="cidades/laguna-carapa.html"><g class="mpt"><circle cx="669" cy="229" r="7" fill="#8fa3cc" stroke="#1A3060" stroke-width="2"/><text x="682" y="233" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Laguna Carapã</text></g></a><a href="cidades/amambai.html"><g class="mpt"><circle cx="654" cy="308" r="7" fill="#8fa3cc" stroke="#1A3060" stroke-width="2"/><text x="667" y="312" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Amambai</text></g></a><a href="cidades/coronel-sapucaia.html"><g class="mpt"><circle cx="599" cy="332" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="612" y="336" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Coronel Sapucaia</text></g></a><a href="cidades/paranhos.html"><g class="mpt"><circle cx="618" cy="420" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="605" y="424" text-anchor="end" font-size="12.5" font-weight="600" fill="#1c2740">Paranhos</text></g></a><a href="cidades/tacuru.html"><g class="mpt"><circle cx="694" cy="383" r="7" fill="#8fa3cc" stroke="#1A3060" stroke-width="2"/><text x="707" y="387" text-anchor="start" font-size="12.5" font-weight="600" fill="#1c2740">Tacuru</text></g></a><a href="cidades/sete-quedas.html"><g class="mpt"><circle cx="690" cy="431" r="9" fill="#FFD400" stroke="#1A3060" stroke-width="2"/><text x="690" y="449" text-anchor="middle" font-size="12.5" font-weight="600" fill="#1c2740">Sete Quedas</text></g></a>
+</svg>
+  <div class="legend"><span><i style="background:#FFD400;border:1px solid #1A3060"></i> na linha de fronteira (cidade-gêmea)</span>
+  <span><i style="background:#8fa3cc"></i> faixa de fronteira</span></div></div>
+</div></section>
+
+<section class="alt" id="municipios"><div class="wrap">
+  <div class="kicker">Municípios</div>
+  <h2>Onze municípios, um território</h2>
+  <p class="lead">Cada município tem um perfil completo para investidores e parceiros: população, economia, fronteira, vocações e oportunidades por eixo — com dado público, fonte e ano em cada número.</p>
+  <div class="chips"><a class="chip" href="cidades/porto-murtinho.html">Porto Murtinho</a><a class="chip" href="cidades/bela-vista.html">Bela Vista</a><a class="chip" href="cidades/antonio-joao.html">Antônio João</a><a class="chip" href="cidades/ponta-pora.html">Ponta Porã</a><a class="chip" href="cidades/aral-moreira.html">Aral Moreira</a><a class="chip" href="cidades/laguna-carapa.html">Laguna Carapã</a><a class="chip" href="cidades/amambai.html">Amambai</a><a class="chip" href="cidades/coronel-sapucaia.html">Coronel Sapucaia</a><a class="chip" href="cidades/paranhos.html">Paranhos</a><a class="chip" href="cidades/tacuru.html">Tacuru</a><a class="chip" href="cidades/sete-quedas.html">Sete Quedas</a></div>
+</div></section>
+
+<section id="eventos"><div class="wrap">
+  <div class="kicker">Agenda 2026</div>
+  <h2>Os próximos encontros do território</h2>
+  <div class="evgrid">
+    <div class="evento">
+      <span class="data">12 e 13 de novembro · 2026</span>
+      <h3>Arena de Relações Internacionais</h3>
+      <div class="local">Bela Vista (MS)</div>
+      <p>O encontro binacional do eixo de Relações Internacionais: integração Brasil–Paraguai, cooperação institucional e as oportunidades da nova fronteira.</p>
+    </div>
+    <div class="evento">
+      <span class="data">4 e 5 de dezembro · 2026</span>
+      <h3>Saúde e Negócios</h3>
+      <div class="local">Ponta Porã (MS)</div>
+      <p>Saúde transfronteiriça e ambiente de negócios: soluções compartilhadas para os desafios comuns do território e novas conexões para investir na fronteira.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="alt" id="igr"><div class="wrap">
+  <div class="kicker">Governança do turismo</div>
+  <h2>IGR Caminhos da Fronteira</h2>
+  <div class="igrduo">
+    <img src="assets/igr.webp" alt="IGR Caminhos da Fronteira">
+    <div>
+      <p class="lead">A <b>Instância de Governança Regional Caminhos da Fronteira</b> organiza o turismo dos onze municípios do território — da pesca esportiva no rio Paraguai e do Pantanal Sul, em Porto Murtinho, ao patrimônio histórico do rio Apa e à cultura ervateira da linha internacional — estruturando roteiros integrados e o posicionamento binacional do destino.</p>
+      <p class="lead" style="margin-top:12px">Com a inclusão de Porto Murtinho, a IGR consolida o mapa turístico completo da fronteira sul-mato-grossense com o Paraguai.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="parceiros"><div class="wrap">
+  <div class="kicker">Parceiros</div>
+  <h2>Quem constrói junto</h2>
+  <div class="pchips">
+    <span class="pchip">Sebrae/MS</span>
+    <span class="pchip">Programa Líder Fronteira</span>
+    <span class="pchip">IGR Caminhos da Fronteira</span>
+    <span class="pchip">Agência de Desenvolvimento da Grande Dourados</span>
+    <span class="pchip">Prefeituras dos 11 municípios</span>
+    <span class="pchip">Instituições do Paraguai</span>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Agência Fronteiras da Inovação</b><br>Faixa de fronteira MS–Paraguai · Brasil ↔ Paraguai</div>
+  <div>Transformar fronteiras em conexões.<br>Conexões em oportunidades. Oportunidades em desenvolvimento.<br><span style="opacity:.7">© 2026 Fronteiras da Inovação. Todos os direitos reservados.</span></div>
+</div></footer>
+</body></html>

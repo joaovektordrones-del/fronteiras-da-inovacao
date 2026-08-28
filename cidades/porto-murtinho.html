@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Porto Murtinho · Fronteiras da Inovação</title>
+<meta name="description" content="Agência Fronteiras da Inovação — desenvolvimento territorial integrado da faixa de fronteira MS–Paraguai. 11 municípios, dois países, um só território.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24407E;--navy2:#1A3060;--yel:#FFD400;--ink:#1c2740;--mut:#5d6b85;--line:#e3e8f2;--bg:#f7f9fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:flex;gap:16px;font-size:13px;font-weight:600;flex-wrap:wrap;color:var(--navy2)}
+.nav a:hover{color:var(--navy);text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;line-height:1.15;max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p{max-width:760px;margin:18px auto 0;font-size:clamp(14px,1.8vw,17px);color:#dbe4f5;line-height:1.6}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hero .cta{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;padding:12px 26px;border-radius:99px}
+.hero .cta2{display:inline-block;border:1.5px solid #9fb2dd;color:#fff;font-weight:600;padding:12px 26px;border-radius:99px}
+.hero .cta2:hover{border-color:var(--yel);color:var(--yel)}
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.tlc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tlc b{display:block;font-size:17px;font-weight:800;color:var(--navy)}
+.tlc span{font-size:12px;color:var(--mut);line-height:1.4;display:block;margin-top:3px}
+.projstrip{margin-top:30px;background:var(--navy2);border-radius:16px;padding:24px;color:#fff}
+.projstrip h3{font-size:15px;font-weight:800;color:var(--yel);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.projstrip .itens{display:flex;flex-wrap:wrap;gap:9px}
+.projstrip .it{font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:99px}
+.igrduo{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:10px}
+.igrduo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pchip{background:var(--bg);border:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.duo{grid-template-columns:1fr}.igrduo{grid-template-columns:1fr}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats{background:var(--navy);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--yel)}
+.stats span{font-size:12.5px;color:#cfd9ee}
+section{padding:56px 0}
+section.alt{background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.lead{max-width:820px;color:var(--mut);line-height:1.7;font-size:15.5px}
+.lead b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1.5px solid var(--navy);color:var(--navy);font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;transition:.15s}
+.chip:hover{background:var(--navy);color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.card p{font-size:13px;color:var(--mut);line-height:1.55}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;font-weight:800}
+.evgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.evento{border-radius:16px;padding:26px;color:#fff;background:linear-gradient(150deg,var(--navy),var(--navy2))}
+.evento .data{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;font-size:13px;padding:5px 13px;border-radius:99px;margin-bottom:13px}
+.evento h3{font-size:20px;font-weight:800;line-height:1.25}
+.evento .local{color:var(--yel);font-weight:600;font-size:14px;margin:6px 0 10px}
+.evento p{font-size:13.5px;color:#dbe4f5;line-height:1.6}
+.mapabox{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+footer{background:var(--navy2);color:#c9d5ec;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff}
+/* página da cidade */
+.cidhero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:46px 0}
+.cidhero .volta{color:var(--yel);font-weight:600;font-size:13px}
+.cidhero h1{font-size:clamp(26px,4vw,40px);font-weight:800;margin-top:10px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff}
+.badge.y{background:var(--yel);color:var(--navy2)}
+.cidhero .pos{max-width:840px;margin-top:16px;color:#dbe4f5;line-height:1.65;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.kpi b{display:block;font-size:21px;font-weight:800;color:var(--navy)}
+.kpi span{font-size:12px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.kpi .fonte{font-size:10px;color:#93a0b8;margin-top:6px;display:block}
+.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:10px}
+.bloco{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.bloco h3{font-size:16px;font-weight:800;margin-bottom:10px;color:var(--navy2)}
+.bloco ul{list-style:none}
+.bloco li{font-size:13.5px;color:var(--mut);line-height:1.55;padding:7px 0;border-bottom:1px dashed var(--line)}
+.bloco li:last-child{border-bottom:none}
+.bloco li b{color:var(--ink);font-weight:600}
+.opgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.op{background:#fff;border:1px solid var(--line);border-left:4px solid var(--yel);border-radius:12px;padding:16px}
+.op h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.op ul{list-style:none}
+.op li{font-size:12.5px;color:var(--mut);line-height:1.5;padding:4px 0}
+.fontes{margin-top:26px;font-size:11.5px;color:#93a0b8;line-height:1.7}
+.fontes a{color:var(--navy);text-decoration:underline}
+@media(max-width:900px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.opgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.duas{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}.opgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html"><img src="../assets/logo-h.webp" alt="Fronteiras da Inovação"></a>
+  <nav class="nav">
+    <a href="../index.html#quem-somos">Quem somos</a>
+    <a href="../index.html#eixos">Eixos</a>
+    <a href="../index.html#territorio">Território</a>
+    <a href="../index.html#municipios">Municípios</a>
+    <a href="../index.html#eventos">Eventos</a>
+    <a href="../index.html#igr">IGR</a>
+    <a href="../index.html#parceiros">Parceiros</a>
+  </nav>
+</div></div>
+
+<div class="cidhero"><div class="wrap">
+  <a class="volta" href="../index.html#municipios">← Todos os municípios</a>
+  <h1>Porto Murtinho</h1>
+  <div class="badges"><span class="badge y">Linha de fronteira</span><span class="badge">↔ Carmelo Peralta · Alto Paraguay</span><span class="badge y">Ponte da Rota Bioceânica</span></div>
+  <p class="pos">Com 17.503 km² e apenas 12.859 habitantes (Censo 2022), Porto Murtinho é o maior município da faixa de fronteira em território e o de menor densidade demográfica (0,73 hab/km²), combinando Pantanal, pecuária extensiva (mais de 630 mil cabeças de bovinos) e uma das maiores terras indígenas do MS (Kadiwéu). Sua vocação histórica em turismo de pesca esportiva no rio Paraguai passa a conviver com o maior projeto de infraestrutura da fronteira: a ponte da Rota Bioceânica, que em julho de 2026 teve suas estruturas brasileira e paraguaia fisicamente unidas, com conclusão total prevista para o segundo semestre do ano.</p>
+</div></div>
+
+<section style="padding-top:34px"><div class="wrap">
+  <div class="kpis"><div class="kpi"><b>12.859</b><span>habitantes</span><span class="fonte">IBGE, Censo 2022</span></div><div class="kpi"><b>12.721</b><span>estimativa 2025</span><span class="fonte">IBGE, 2025</span></div><div class="kpi"><b>R$ 44.444</b><span>PIB per capita</span><span class="fonte">IBGE, 2023</span></div><div class="kpi"><b>0,666</b><span>IDHM</span><span class="fonte">Atlas Brasil/PNUD, 2010</span></div><div class="kpi"><b>17.503</b><span>km² de área</span><span class="fonte">IBGE</span></div><div class="kpi"><b>282</b><span>empresas ativas</span><span class="fonte">CNPJ/RFB (proxy), 2021</span></div><div class="kpi"><b>2.884</b><span>veículos na frota</span><span class="fonte">Senatran/MS, 2021</span></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="duas">
+  <div class="bloco"><h3>Economia & vocações</h3><ul><li><b>Vocações:</b> Pecuária de corte (bovinocultura extensiva), Turismo de pesca esportiva (rio Paraguai / Pantanal), Comércio, Agricultura de grãos (soja e milho, em expansão), Mineração não metálica (areia, cascalho, granito), Logística de fronteira (Rota Bioceânica)</li><li><b>Cadeias produtivas:</b> A pecuária bovina é a base histórica e atual da economia rural: rebanho de 636.473 cabeças em 2020 (ante 698.000 em 2016), maior componente da arrecadação de ICMS (64% em 2021, SEMADESC-MS).</li><li><b>Empregadores de referência:</b> Administração pública municipal (Prefeitura de Porto Murtinho), Pecuária de corte — fazendas (rebanho de 636 mil cabeças em 2020, SEMADESC-MS), Comércio varejista (208 estabelecimentos varejistas em 2021, SEMADESC-MS), Turismo de pesca esportiva — hotéis-barco (ex.: Xaraiés Barco Hotel)</li><li><b>Comunidades e assentamentos:</b> Terra Indígena Kadiwéu, uma das maiores do Mato Grosso do Sul, com parte de seu território no município de Porto Murtinho (limites naturais pelos rios Paraguai e Nabileque a oeste, Serra da Bodoquena a leste);</li></ul>
+  <ul style="margin-top:8px"><li><b>Atrativos:</b> Rio Paraguai — pesca esportiva de pintado, dourado, barbado e pacu, Pantanal Sul-Mato-Grossense (o município concentra cerca de 3% do bioma Pantanal brasileiro), Morro Pão de Açúcar (550 m), Fecho dos Morros e Morro Celina (trilhas)</li></ul></div>
+  <div class="bloco"><h3>Fronteira & logística</h3><ul><li><b>Cidade vizinha (PY):</b> Carmelo Peralta — Alto Paraguay</li><li><b>Ligação:</b> Ponte Internacional da Rota Bioceânica sobre o rio Paraguai (estruturas brasileira e paraguaia fisicamente unidas em torno de 21-24/07/2026); do lado paraguaio, rodovia PY15 segue até a malha viária do Paraguai/Argentina/Chile</li><li><b>Acessos:</b> BR-267</li><li><b>Distância de Campo Grande:</b> 437 km</li><li><b>Rota Bioceânica:</b> Porto Murtinho é o ponto de travessia brasileiro da Rota Bioceânica (Corredor Rodoviário Bioceânico Brasil-Paraguai-Argentina-Chile), ligando-se por ponte binacional sobre o rio Paraguai a Carmelo Peralta (departamento de Alto Paraguay, Paraguai), de onde a rodovia paraguaia PY15 segue rumo aos…</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Para investir</div>
+  <h2>Oportunidades por eixo</h2>
+  <div class="opgrid"><div class="op"><h4>Turismo</h4><ul><li>• Estruturar roteiros binacionais de pesca esportiva e observação de fauna no rio Paraguai/Pantanal, aproveitando o fluxo esperado com a abertura da…</li><li>• Ampliar a rede de hotéis-barco e pousadas de pesca (hoje com operadores como o Xaraiés Barco Hotel), mirando também turista paraguaio/regional via…</li><li>• Usar o calendário de eventos de fronteira (Festival Internacional do Chamamé, aniversário/rodeio) como vetor de turismo cultural e binacional</li></ul></div><div class="op"><h4>Relações Internacionais</h4><ul><li>• Cogestão binacional da travessia com Carmelo Peralta/departamento de Alto Paraguay, incluindo o futuro Centro Integrado de Controle de Fronteira…</li><li>• Articulação com o Corredor Bioceânico Brasil-Paraguai-Argentina-Chile para atrair operadores logísticos e investidores voltados à rota do Pacífico</li><li>• Apoio à definição dos protocolos aduaneiros, migratórios e sanitários de fronteira antes da abertura operacional plena da ponte</li></ul></div><div class="op"><h4>Educação & Inovação</h4><ul><li>• Criar formação técnica e profissionalizante em logística, comércio exterior e operação aduaneira, antecipando a demanda de mão de obra da Rota…</li><li>• Avaliar e ampliar a oferta de ensino superior local (hoje restrita a registros de UFGD/UFMS sem confirmação de campus pleno) para reter jovens e…</li><li>• Capacitar em espanhol e atendimento binacional para comércio e turismo de fronteira</li></ul></div><div class="op"><h4>Saúde</h4><ul><li>• Estruturar capacidade de vigilância sanitária e fito/zoossanitária de fronteira para o futuro CICF, dado o peso do agronegócio na rota</li><li>• Fortalecer a rede SUS local para atender também o fluxo temporário de caminhoneiros e trabalhadores da obra/futura operação da ponte</li><li>• Priorizar atenção básica e pré-natal diante da mortalidade infantil de 19,51 óbitos por mil nascidos vivos (IBGE, 2025)</li></ul></div><div class="op"><h4>Agronegócios</h4><ul><li>• Agregar valor local à pecuária de corte (636 mil+ cabeças) — abate/frigorífico, processamento — aproveitando o futuro escoamento pela Rota Bioceânica</li><li>• Apoiar a expansão da lavoura de grãos (soja saltou de 2.670 ha/7.850 t em 2016 para 5.600 ha/19.488 t em 2020) com infraestrutura de armazenagem</li><li>• Explorar o potencial mineral (areia, cascalho, granito) para insumos de construção civil, dada a demanda da própria obra da ponte e da futura…</li></ul></div><div class="op"><h4>Governança</h4><ul><li>• Ampliar a capacidade fiscal e de gestão municipal para lidar com o salto de complexidade de uma fronteira internacional operante (tráfego pesado, uso…</li><li>• Diversificar a arrecadação própria municipal (ISS, IPTU, ITBI, hoje instável ano a ano e pequena frente ao orçamento total, SEMADESC 2017-2021) e…</li><li>• Planejar o uso do solo e o zoneamento logístico-industrial na região da ponte antes da chegada plena do Corredor Bioceânico</li></ul></div></div>
+  <p class="fontes"><b>Fontes:</b> IBGE Cidades – Porto Murtinho (MS), Panorama (2025/2023/2022) · IBGE – Cidades e Estados: Porto Murtinho (MS) (2025) · SEMADESC-MS – Perfil Socioeconômico Municipal: Porto Murtinho (2022 (dados-base 2016-2021)) · Instituto Água e Saneamento – Saneamento em Porto Murtinho (MS) (2024 (SINISA)) · Infosanbas – Município de Porto Murtinho (MS) (2010/2020) · Prefeitura de Porto Murtinho – Visita técnica marca momento histórico com a ligação física da Ponte da Rota Bioceânica (2026) · Prefeitura de Porto Murtinho – Prefeito Nelson Cintra recebe comitiva da Receita Federal em visita à Ponte da Rota Bioceânica (2026) · Rota Bioceânica – Momentos finais da conexão física da ponte, financiada pela Itaipu (2026) · Perfil elaborado pela Agência Fronteiras da Inovação com dado público verificável; valores acompanham fonte e ano.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Agência Fronteiras da Inovação</b><br>Faixa de fronteira MS–Paraguai · Brasil ↔ Paraguai</div>
+  <div>Transformar fronteiras em conexões.<br>Conexões em oportunidades. Oportunidades em desenvolvimento.<br><span style="opacity:.7">© 2026 Fronteiras da Inovação. Todos os direitos reservados.</span></div>
+</div></footer>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paranhos · Fronteiras da Inovação</title>
+<meta name="description" content="Agência Fronteiras da Inovação — desenvolvimento territorial integrado da faixa de fronteira MS–Paraguai. 11 municípios, dois países, um só território.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24407E;--navy2:#1A3060;--yel:#FFD400;--ink:#1c2740;--mut:#5d6b85;--line:#e3e8f2;--bg:#f7f9fc}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.topbar{background:#fff;border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;flex-wrap:wrap}
+.brand img{height:38px;width:auto;display:block}
+.nav{display:flex;gap:16px;font-size:13px;font-weight:600;flex-wrap:wrap;color:var(--navy2)}
+.nav a:hover{color:var(--navy);text-decoration:underline}
+.hero{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:64px 0 56px;text-align:center}
+.hero h1{font-size:clamp(28px,4.6vw,46px);font-weight:800;line-height:1.15;max-width:900px;margin:0 auto}
+.hero h1 em{color:var(--yel);font-style:normal}
+.hero p{max-width:760px;margin:18px auto 0;font-size:clamp(14px,1.8vw,17px);color:#dbe4f5;line-height:1.6}
+.hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.hero .cta{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;padding:12px 26px;border-radius:99px}
+.hero .cta2{display:inline-block;border:1.5px solid #9fb2dd;color:#fff;font-weight:600;padding:12px 26px;border-radius:99px}
+.hero .cta2:hover{border-color:var(--yel);color:var(--yel)}
+.duo{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center}
+.duo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.tlc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tlc b{display:block;font-size:17px;font-weight:800;color:var(--navy)}
+.tlc span{font-size:12px;color:var(--mut);line-height:1.4;display:block;margin-top:3px}
+.projstrip{margin-top:30px;background:var(--navy2);border-radius:16px;padding:24px;color:#fff}
+.projstrip h3{font-size:15px;font-weight:800;color:var(--yel);margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em}
+.projstrip .itens{display:flex;flex-wrap:wrap;gap:9px}
+.projstrip .it{font-size:12.5px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:7px 14px;border-radius:99px}
+.igrduo{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:10px}
+.igrduo img{width:100%;border-radius:16px;border:1px solid var(--line)}
+.pchips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.pchip{background:var(--bg);border:1px solid var(--line);color:var(--navy2);font-weight:600;font-size:13.5px;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.duo{grid-template-columns:1fr}.igrduo{grid-template-columns:1fr}.tl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stats{background:var(--navy);color:#fff;padding:34px 0}
+.stats .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;text-align:center}
+.stats b{display:block;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--yel)}
+.stats span{font-size:12.5px;color:#cfd9ee}
+section{padding:56px 0}
+section.alt{background:var(--bg)}
+.kicker{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin-bottom:8px}
+h2{font-size:clamp(22px,3vw,32px);font-weight:800;line-height:1.2;margin-bottom:14px}
+.lead{max-width:820px;color:var(--mut);line-height:1.7;font-size:15.5px}
+.lead b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1.5px solid var(--navy);color:var(--navy);font-weight:600;font-size:14px;padding:9px 18px;border-radius:99px;transition:.15s}
+.chip:hover{background:var(--navy);color:#fff}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:26px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{font-size:15.5px;font-weight:700;margin-bottom:6px}
+.card p{font-size:13px;color:var(--mut);line-height:1.55}
+.card .ic{width:40px;height:40px;border-radius:10px;background:var(--navy);color:var(--yel);display:flex;align-items:center;justify-content:center;font-size:19px;margin-bottom:12px;font-weight:800}
+.evgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.evento{border-radius:16px;padding:26px;color:#fff;background:linear-gradient(150deg,var(--navy),var(--navy2))}
+.evento .data{display:inline-block;background:var(--yel);color:var(--navy2);font-weight:700;font-size:13px;padding:5px 13px;border-radius:99px;margin-bottom:13px}
+.evento h3{font-size:20px;font-weight:800;line-height:1.25}
+.evento .local{color:var(--yel);font-weight:600;font-size:14px;margin:6px 0 10px}
+.evento p{font-size:13.5px;color:#dbe4f5;line-height:1.6}
+.mapabox{margin-top:26px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:10px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+footer{background:var(--navy2);color:#c9d5ec;padding:34px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer b{color:#fff}
+/* página da cidade */
+.cidhero{background:linear-gradient(160deg,var(--navy),var(--navy2));color:#fff;padding:46px 0}
+.cidhero .volta{color:var(--yel);font-weight:600;font-size:13px}
+.cidhero h1{font-size:clamp(26px,4vw,40px);font-weight:800;margin-top:10px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{font-size:11.5px;font-weight:700;padding:4px 12px;border-radius:99px;background:rgba(255,255,255,.14);color:#fff}
+.badge.y{background:var(--yel);color:var(--navy2)}
+.cidhero .pos{max-width:840px;margin-top:16px;color:#dbe4f5;line-height:1.65;font-size:15px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:26px}
+.kpi{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.kpi b{display:block;font-size:21px;font-weight:800;color:var(--navy)}
+.kpi span{font-size:12px;color:var(--mut);display:block;margin-top:3px;line-height:1.35}
+.kpi .fonte{font-size:10px;color:#93a0b8;margin-top:6px;display:block}
+.duas{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:10px}
+.bloco{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+.bloco h3{font-size:16px;font-weight:800;margin-bottom:10px;color:var(--navy2)}
+.bloco ul{list-style:none}
+.bloco li{font-size:13.5px;color:var(--mut);line-height:1.55;padding:7px 0;border-bottom:1px dashed var(--line)}
+.bloco li:last-child{border-bottom:none}
+.bloco li b{color:var(--ink);font-weight:600}
+.opgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.op{background:#fff;border:1px solid var(--line);border-left:4px solid var(--yel);border-radius:12px;padding:16px}
+.op h4{font-size:13px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+.op ul{list-style:none}
+.op li{font-size:12.5px;color:var(--mut);line-height:1.5;padding:4px 0}
+.fontes{margin-top:26px;font-size:11.5px;color:#93a0b8;line-height:1.7}
+.fontes a{color:var(--navy);text-decoration:underline}
+@media(max-width:900px){.stats .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.opgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.duas{grid-template-columns:1fr}.evgrid{grid-template-columns:1fr}}
+@media(max-width:560px){.grid3{grid-template-columns:1fr}.opgrid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap">
+  <a class="brand" href="../index.html"><img src="../assets/logo-h.webp" alt="Fronteiras da Inovação"></a>
+  <nav class="nav">
+    <a href="../index.html#quem-somos">Quem somos</a>
+    <a href="../index.html#eixos">Eixos</a>
+    <a href="../index.html#territorio">Território</a>
+    <a href="../index.html#municipios">Municípios</a>
+    <a href="../index.html#eventos">Eventos</a>
+    <a href="../index.html#igr">IGR</a>
+    <a href="../index.html#parceiros">Parceiros</a>
+  </nav>
+</div></div>
+
+<div class="cidhero"><div class="wrap">
+  <a class="volta" href="../index.html#municipios">← Todos os municípios</a>
+  <h1>Paranhos</h1>
+  <div class="badges"><span class="badge y">Linha de fronteira</span><span class="badge">↔ Ypejhú · Canindeyú</span></div>
+  <p class="pos">Município de pequeno porte (13.412 hab. estimados, 2026) na confluência entre Coronel Sapucaia, Sete Quedas e a fronteira seca com Ypejhú (Paraguai). Economia ancorada em pecuária de corte, soja e administração pública, com forte peso institucional do setor público nas contas e no emprego. Diferencial de fronteira: ligação terrestre direta e sem barreira natural com o Paraguai, ainda pouco estruturada em termos de cooperação binacional formal, e a maior terra indígena identificada entre os municípios da faixa (TI Ypo&#x27;i/Triunfo, ~19.756 ha), cuja demarcação avançou em nível federal em novembro de 2025.</p>
+</div></div>
+
+<section style="padding-top:34px"><div class="wrap">
+  <div class="kpis"><div class="kpi"><b>12.921</b><span>habitantes</span><span class="fonte">IBGE, Censo 2022</span></div><div class="kpi"><b>13.412</b><span>estimativa 2026</span><span class="fonte">IBGE, 2026</span></div><div class="kpi"><b>R$ 28.727</b><span>PIB per capita</span><span class="fonte">IBGE, 2023</span></div><div class="kpi"><b>0,588</b><span>IDHM</span><span class="fonte">Atlas Brasil/PNUD, 2010</span></div><div class="kpi"><b>1.307</b><span>km² de área</span><span class="fonte">IBGE</span></div></div>
+</div></section>
+
+<section class="alt"><div class="wrap"><div class="duas">
+  <div class="bloco"><h3>Economia & vocações</h3><ul><li><b>Vocações:</b> Pecuária de corte, Agricultura (soja), Administração pública, Agricultura familiar e comércio de fronteira (incipiente)</li><li><b>Cadeias produtivas:</b> Pecuária bovina de corte e cultivo de soja concentram a atividade privada formal (maiores empregadores privados por vínculos CAGED/RAIS). Administração pública responde pela maior fatia do PIB (~38,7%) e é a maior empregadora formal do município.</li><li><b>Empregadores de referência:</b> Administração pública municipal (~475 vínculos formais — maior empregador do município), Pecuária de corte (~99 vínculos formais), Cultivo de soja (~62 vínculos formais)</li><li><b>Comunidades e assentamentos:</b> Terra Indígena Ypo&#x27;i/Triunfo, localizada no município de Paranhos (etnias Guarani Kaiowá e Guarani Ñandeva), com área de aproximadamente 19.756 ha e cerca de 869 indígenas segundo levantamento da FUNAI de 2009 (citado em reportagens de…</li></ul>
+  </div>
+  <div class="bloco"><h3>Fronteira & logística</h3><ul><li><b>Cidade vizinha (PY):</b> Ypejhú — Canindeyú</li><li><b>Ligação:</b> Linha seca (fronteira terrestre sem curso d&#x27;água natural delimitador), classificação padrão dos pares de cidades-gêmeas nesse trecho da fronteira MS-Paraguai</li><li><b>Acessos:</b> MS-165 (entr. MS-386 – Aral Moreira – Vila Marques – Coronel Sapucaia – Paranhos – entr. MS-295/MS-299), MS-299 (Paranhos – Sobradinho – Sete Quedas – entr. MS-160 – Corrente – acesso à BR-163)</li><li><b>Distância de Campo Grande:</b> 469 km</li><li><b>Rota Bioceânica:</b> Paranhos não consta no traçado oficial do Corredor Bioceânico de Capricórnio (Rota Bioceânica), cujo ponto de travessia em MS é Porto Murtinho–Carmelo Peralta; não foram localizadas fontes públicas que incluam Paranhos no planejamento oficial dessa rota.</li></ul></div>
+</div></div></section>
+
+<section><div class="wrap">
+  <div class="kicker">Para investir</div>
+  <h2>Oportunidades por eixo</h2>
+  <div class="opgrid"><div class="op"><h4>Turismo</h4><ul><li>• Estruturação de roteiro de turismo de fronteira/compras associado à linha seca com Ypejhú (PY), hoje sem infraestrutura documentada</li><li>• Etnoturismo responsável ligado ao artesanato e à cultura Guarani-Kaiowá/Ñandeva, em parceria direta com as comunidades da TI Ypo&#x27;i/Triunfo</li><li>• Turismo rural associado às atividades de pecuária e agricultura familiar</li></ul></div><div class="op"><h4>Relações Internacionais</h4><ul><li>• Cooperação transfronteiriça formal com Ypejhú (Canindeyú, PY) em saúde, educação e segurança pública, dada a ausência de barreira natural (linha seca)</li><li>• Articulação para fiscalização aduaneira compartilhada, hoje sem posto formal identificado (dependência de Ponta Porã)</li><li>• Integração ao comitê de fronteira MS-Paraguai e a redes de cidades-gêmeas para captação de recursos de cooperação binacional</li></ul></div><div class="op"><h4>Educação & Inovação</h4><ul><li>• Ampliação da oferta técnica/profissionalizante (hoje sem instituição de nível superior/técnico identificada) via SENAR/SENAI/IFMS itinerante</li><li>• Programas de alfabetização e permanência escolar bilíngue português-guarani voltados à população indígena</li><li>• Extensão e pesquisa aplicada em pecuária e agricultura familiar de pequena escala</li></ul></div><div class="op"><h4>Saúde</h4><ul><li>• Fortalecimento da atenção primária para cobrir área rural extensa (1.307 km²) e aldeias/acampamentos indígenas dispersos</li><li>• Cooperação sanitária transfronteiriça com Ypejhú para vigilância epidemiológica conjunta</li><li>• Telemedicina para reduzir dependência de deslocamentos a Amambai, Ponta Porã e Campo Grande (469 km)</li></ul></div><div class="op"><h4>Agronegócios</h4><ul><li>• Agregação de valor à pecuária de corte (principal vocação privada) via beneficiamento local</li><li>• Diversificação produtiva com agricultura familiar e cadeias curtas de abastecimento</li><li>• Regularização fundiária como base para atração de investimento produtivo sustentável, dado o histórico de conflitos de terra nas áreas indígenas</li></ul></div><div class="op"><h4>Governança</h4><ul><li>• Modernização da gestão fiscal municipal, dada a alta dependência de transferências (receitas brutas de ~R$ 128,5 milhões em 2025 frente a um PIB…</li><li>• Diálogo institucional estruturado entre poder público, produtores rurais e comunidades indígenas em torno da TI Ypo&#x27;i/Triunfo</li><li>• Participação ativa nos fóruns da Agência Fronteiras da Inovação para diagnóstico territorial e captação de investimento regional</li></ul></div></div>
+  <p class="fontes"><b>Fontes:</b> IBGE | Cidades e Estados | Paranhos (MS) (2022-2026 (painel consultado em 08/2026)) · Caravela — Economia de Paranhos-MS (dados IBGE, CAGED, RAIS, Banco Central) (2023-2026 (atualizado 01/08/2026)) · Midiamax — Demarcado na COP30, território Ypoi-Triunfo é símbolo de luta e resistência dos Guarani em MS (2025) · CIMI — Guarani e Kaiowá retomam duas áreas da TI Ypo&#x27;i-Triunfo em busca de demarcação e Justiça (2015) · TRF3 — Comissão Fundiária da 3ª Região visita fazendas disputadas por comunidade indígena em Paranhos/MS (s.d.) · AGESUL-MS — Sistema Rodoviário do Estado de Mato Grosso do Sul (SREMS) (2017) · Cidades do Meu Brasil — Paranhos (MS) (s.d. (estimativa populacional citada de 2018)) · Wikipédia — Paranhos (Mato Grosso do Sul) (s.d.) · Perfil elaborado pela Agência Fronteiras da Inovação com dado público verificável; valores acompanham fonte e ano.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div><b>Agência Fronteiras da Inovação</b><br>Faixa de fronteira MS–Paraguai · Brasil ↔ Paraguai</div>
+  <div>Transformar fronteiras em conexões.<br>Conexões em oportunidades. Oportunidades em desenvolvimento.<br><span style="opacity:.7">© 2026 Fronteiras da Inovação. Todos os direitos reservados.</span></div>
+</div></footer>
+</body></html>
